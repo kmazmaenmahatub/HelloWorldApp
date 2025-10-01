@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     private Button button;
     private Button button2;
 
+    private Button button3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.textView);
         button = findViewById(R.id.button);
-        button2 = findViewById(R.id.button2); // This was missing!
+        button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
 
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textView.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+            }
+        });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textView.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
             }
         });
     }
